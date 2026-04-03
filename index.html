@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suheon Nam - HCI Researcher</title>
+    <style>
+        /* Base Design */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --light-gray: #f8f9fa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #eaeaea;
+            z-index: 1000;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+            nav a {
+                margin: 0 15px;
+                text-decoration: none;
+                color: var(--primary-color);
+                font-weight: 600;
+                font-size: 0.95rem;
+            }
+
+                nav a:hover {
+                    color: var(--accent-color);
+                }
+
+        /* Layout */
+        .container {
+            max-width: 900px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
+
+        section {
+            padding-top: 60px; /* Offset for sticky nav */
+            margin-bottom: 40px;
+        }
+
+        /* Profile Header Design (Home Section) */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .profile-img-container {
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 240px;
+            border-radius: 10%;
+            object-fit: cover;
+            border: 4px solid #eaeaea;
+        }
+
+        .profile-text {
+            flex-grow: 1;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin: 0 0 0.2rem 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        /* Components */
+        .contact-info {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .news-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .date {
+            font-weight: bold;
+            min-width: 100px;
+            display: inline-block;
+            color: #555;
+        }
+
+        .item-box {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .item-venue {
+            font-style: italic;
+            color: #555;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#publications">Publication / Research</a>
+        <a href="#awards">Awards</a>
+        <a href="#experience">Experience & Education</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="home">
+            <div class="profile-header">
+                <div class="profile-img-container">
+                    <img src="profile.jpg" alt="Suheon Nam" class="profile-img">
+                </div>
+                <div class="profile-text">
+                    <h1>Suheon Nam</h1>
+                    <div class="contact-info">
+                        M.S. Student at <a href="https://interaction.postech.ac.kr/index.html" target="_blank">Interaction Lab</a>, POSTECH<br>
+                        Advisor: <a href="https://choism.postech.ac.kr/" target="_blank">Prof. Seungmoon Choi</a><br>
+                        Email: suheon1203@postech.ac.kr<br>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                        <a href="resume.pdf" target="_blank">CV (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2>About Me</h2>
+            <p>I am a graduate student in the <a href="https://interaction.postech.ac.kr/index.html" target="_blank">Interaction Lab</a> at POSTECH, advised by <a href="https://choism.postech.ac.kr/" target="_blank">Prof. Seungmoon Choi</a>. My research primarily focuses on haptics, wearable technology, and virtual reality. I am passionate about exploring new ways for humans to interact with computers, spanning from hardware prototyping and circuit design to 3D modeling and information visualization.</p>
+
+            <h3>Recent News</h3>
+            <div class="news-item"><span class="date">[Jan 2026]</span> Paper accepted on CHI 2026 with "HaRing: A Haptic Ring Interface for One-Handed Interaction". </div>
+            <div class="news-item"><span class="date">[Nov 2025]</span> Won the Encouragement Award at the 2025 POSTECH "Introduce My Research" Competition.</div>
+            <div class="news-item"><span class="date">[Aug 2025]</span> Received the Creative Challenge Award at the ICT Challenge 2025.</div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications & Research</h2>
+
+            <h3>Publications</h3>
+            <div class="item-box">
+                <span class="item-title">HaRing: A Haptic Ring Interface for One-Handed Interaction</span>
+                <span class="item-venue">ACM CHI Conference on Human Factors in Computing Systems (CHI '26)</span><br>
+                <b>Suheon Nam</b>, Juhyung Son, Seungmoon Choi, and Chaeyong Park.
+            </div>
+
+            <div class="item-box">
+                <span class="item-title">Effects of Spatiotemporal Parameters on Forearm Vibrotactile Stimulus Identification</span>
+                <span class="item-venue">IEEE Haptics Symposium (HS '26)</span><br>
+                Dong-Geun Kim, Geunho Lee, <b>Suheon Nam</b>, Chaeyong Park, and Seungmoon Choi.
+            </div>
+
+            <div class="item-box">
+                <span class="item-title">Tactile Localization in Forearm-Mounted Multi-Tactor Displays</span>
+                <span class="item-venue">IEEE World Haptics Conference (WHC '25 WIP)</span><br>
+                Dong-Geun Kim, <b>Suheon Nam</b>, Chaeyong Park, Geunho Lee, and Seungmoon Choi.
+            </div>
+
+            <h3>Past Research Projects</h3>
+            <ul>
+                <li>
+                    <strong>Evaluation of Pattern Recognition Ability Based on Braille (2025):</strong>
+                    Developed a wearable ring-shaped haptic interface to transmit information via Braille-like patterns, achieving a 93.3% recognition accuracy through spatio-temporal modulation.
+                </li>
+                <li>
+                    <strong>VR-based Exercise & Layup Training System (2024):</strong>
+                    Created an immersive VR environment using Azure Kinect and Unity that tracks user motion in real-time to provide feedback on basketball layup techniques, effectively improving shooting success rates.
+                </li>
+                <li>
+                    <strong>Refrigerator Food Expiration Management System (2022):</strong>
+                    Implemented an automated inventory system using OpenCV-based digit recognition to identify expiration dates and a web-based platform for mobile food management.
+                </li>
+                <li>
+                    <strong>Makeup Guide Smart Mirror (2021):</strong>
+                    Developed an interactive smart mirror using Raspberry Pi and MediaPipe to provide real-time facial guidelines, assisting users in following complex makeup tutorials.
+                </li>
+                <li>
+                    <strong>Arduino-based Fireplace Humidifier (2021):</strong>
+                    Designed a functional humidifier using Arduino that combines water mist and LED lighting to simulate a realistic fireplace effect, merging aesthetic design with environmental sensing.
+                </li>
+            </ul>
+        </section>
+
+        <section id="awards">
+            <h2>Awards & Honors</h2>
+
+            <h3>Graduate Highlights</h3>
+            <ul>
+                <li><strong>Encouragement Award</strong>, POSTECH "Introduce My Research" Competition (Nov 2025)</li>
+                <li><strong>Creative Challenge Award</strong>, ICT Challenge 2025 hosted by MSIT (Aug 2025)</li>
+            </ul>
+
+            <h3>Undergraduate Highlights</h3>
+            <ul>
+                <li><strong>Grand Prize</strong>, 2024 POSTECH Undergraduate Research Program (UGRP) (Feb 2025)</li>
+                <li><strong>1st Place (Dunamu Track)</strong>, BlackOut 2025 Corporate-Linked Hackathon (Jan 2025)</li>
+                <li><strong>Excellence Award</strong>, Posco ESG: Level up ground Poster Session (Nov 2024)</li>
+                <li><strong>Grand Prize</strong>, Techaton by Techreview (Jan 2024 & Jan 2021)</li>
+                <li><strong>Grand Prize</strong>, Idea Contest for University Innovation Growth (Dec 2023)</li>
+                <li><strong>Grand Prize</strong>, Personal Mobility Charging Station Idea Contest (Feb 2023)</li>
+                <li><strong>1st Place</strong>, 1st Yonsei-POSTECH Ideathon (YPI) (Feb 2021)</li>
+                <li><strong>Grand Prize</strong>, POSTECH Debate Competition on Pandemic Telemedicine (Nov 2020)</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience & Education</h2>
+
+            <h3>Education</h3>
+            <div class="item-box">
+                <span class="item-title">Pohang University of Science and Technology (POSTECH)</span>
+                M.S. in Computer Science and Engineering<br>
+                <span class="item-venue">Feb 2025 – Present</span>
+            </div>
+
+            <div class="item-box">
+                <span class="item-title">Pohang University of Science and Technology (POSTECH)</span>
+                B.S. in Convergence IT Engineering and Computer Science and Engineering (Double Major)<br>
+                <span class="item-venue">Feb 2020 – Feb 2025</span>
+            </div>
+
+            <h3>Industry & Research Experience</h3>
+            <ul>
+                <li><strong>Samsung Electronics:</strong> SW developer Intern (Jan 2023 - Feb 2023)</li>
+                <li><strong>Shift Up:</strong> SW developer and PM Intern (Jun 2021 - Aug 2021)</li>
+            </ul>
+
+            <h3>Honorary Selection</h3>
+            <ul>
+                <li><strong>IPESK Next-Generation Engineer (2024):</strong> Selected for the 1st cohort by the Korea Institute for the Promotion of Engineering Education.</li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+</html>
